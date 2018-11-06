@@ -16,6 +16,7 @@ gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
+gem 'milia', github: 'jekuno/milia', branch: 'issue#76'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
@@ -29,3 +30,5 @@ group :development, :test do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'dotenv-rails'
 end
+
+gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
