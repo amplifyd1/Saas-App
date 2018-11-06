@@ -17,6 +17,8 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'milia', github: 'jekuno/milia', branch: 'issue#76'
+gem 'twitter-bootstrap-rails'
+gem 'devise-bootstrap-views'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
