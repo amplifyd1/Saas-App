@@ -1,16 +1,14 @@
+<%= simple_form_for @project, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :title %>
+  <%= error_span(@project[:title]) %>
+  <%= f.input :details %>
+  <%= error_span(@project[:details]) %>
+  <%= f.input :expected_completion_date %>
+  <%= error_span(@project[:expected_completion_date]) %>
+  <%= f.input :tenant_id %>
+  <%= error_span(@project[:tenant_id]) %>
 
-<%= simple_form_for(@project) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-
-  <div class="form-inputs">
-    <%= f.input :title %>
-    <%= f.input :details %>
-    <%= f.input :expected_completion_date %>
-    <%= f.association :tenant %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                projects_path, :class => 'btn btn-default' %>
 <% end %>
