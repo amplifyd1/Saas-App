@@ -3,7 +3,7 @@ require_relative 'application'
 
 # Initialize the Rails application.
 Rails.application.initialize!
-config.action_mailer.perform_deliveries = true
+# config.action_mailer.perform_deliveries = true
 ActionMailer::Base.smtp_settings = {
 
 :address => 'smtp.sendgrid.net',
