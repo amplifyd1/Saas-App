@@ -19,6 +19,8 @@ gem 'webpacker'
 gem 'milia', github: 'jekuno/milia', branch: 'issue#76'
 gem 'twitter-bootstrap-rails'
 gem 'devise-bootstrap-views'
+gem 'bootstrap-datepicker-rails'
+gem 'jquery-rails'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

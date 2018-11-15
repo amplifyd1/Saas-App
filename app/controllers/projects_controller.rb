@@ -74,10 +74,6 @@ class ProjectsController < ApplicationController
         flash: { error: 'You are not authorized to access any organization other than your own'}
       end
     end
-end
-
-
-
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
       params.require(:project).permit(:title, :details, :expected_completion_date, :tenant_id)
