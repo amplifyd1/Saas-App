@@ -39,7 +39,7 @@
   <p class="lead">You don't have any projects</p>
 <% end %>
 
-<% #if (@tenant.can_create_projects?) %>
-  <%#= link_to 'New Project', new_tenant_project_path(tenant_id: @tenant.id),
+<% if (@tenant.can_create_projects?) %>
+  <#= link_to 'New Project', new_tenant_project_path(tenant_id: @tenant.id),
             :class => 'btn btn-primary' %>
-<%# end %>
+<% end %>
