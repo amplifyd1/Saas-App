@@ -21,6 +21,7 @@ gem 'twitter-bootstrap-rails'
 gem 'devise-bootstrap-views'
 gem 'bootstrap-datepicker-rails'
 gem 'jquery-rails'
+gem 'aws-sdk'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
