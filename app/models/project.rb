@@ -1,7 +1,8 @@
 class Project < ApplicationRecord
+  require 'dotenv/load'
   belongs_to :tenant
   validates_uniqueness_of :title
-  validates :free_plan_can_only_have_one_project
+  validate :free_plan_can_only_have_one_project
   has_many :artifacts, dependent: :destroy
 
   def free_plan_can_only_have_one_project

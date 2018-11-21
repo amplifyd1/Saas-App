@@ -23,7 +23,7 @@
 <%= link_to t('Back to Organization Home', :default => t("helpers.links.back")),
               root_path, :class => 'btn btn-default'  %>
 <%= link_to t('.edit', :default => t("helpers.links.edit")),
-              edit_project_path(project: @project, tenant: @project.tenant_id), :class => 'btn btn-default' %>
+              users_tenant_project_path(project: @project, tenant: @project.tenant_id), :class => 'btn btn-default' %>
 <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
               tenant_project_path(@project, @project.tenant_id),
               :method => 'delete',
