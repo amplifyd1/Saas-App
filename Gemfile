@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.4.4'
 
+gem 'dotenv-rails', require: 'dotenv/rails-now'
 gem 'bootsnap', require: false
 gem 'devise'
 gem 'jbuilder', '~> 2.0'
@@ -29,7 +30,6 @@ group :development do
 end
 
 group :development, :test do
-  gem 'dotenv-rails', require: 'dotenv/rails-now'
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'listen', '~> 3.0.5'
