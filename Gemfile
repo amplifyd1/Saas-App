@@ -22,6 +22,7 @@ gem 'devise-bootstrap-views'
 gem 'bootstrap-datepicker-rails'
 gem 'jquery-rails'
 gem 'aws-sdk'
+gem 'stripe'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
