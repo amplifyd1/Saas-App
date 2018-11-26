@@ -23,6 +23,11 @@ Rails.application.routes.draw do
     :passwords => "milia/passwords",
   }
 
+  match '/plan/edit' => 'tenants#edit', via: :get, as: :edit_plan
+  match '/plan/update' => 'tenants#update', via: [:put, :patch], as: :update_plan
+
+
+
 
   # root to: 'pages#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
