@@ -1,0 +1,10 @@
+<%= simple_form_for @user_project, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :project_id %>
+  <%= error_span(@user_project[:project_id]) %>
+  <%= f.input :user_id %>
+  <%= error_span(@user_project[:user_id]) %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                user_projects_path, :class => 'btn btn-default' %>
+<% end %>

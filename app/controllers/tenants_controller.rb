@@ -1,6 +1,5 @@
 class TenantsController < ApplicationController
   before_action :set_tenant
-
   def edit
   end
 
@@ -40,14 +39,13 @@ class TenantsController < ApplicationController
     redirect_to home_index_path, notice: "Switched to organization #{@tenant.name}"
   end
 
-private
+  private
 
   def set_tenant
-  @tenant = Tenant.find(Tenant.current_tenant_id)
+    @tenant = Tenant.find(Tenant.current_tenant_id)
   end
 
   def tenant_params
     params.require(:tenant).permit(:name, :plan)
   end
-
 end
